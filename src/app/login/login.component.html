@@ -1,0 +1,49 @@
+
+    <app-header></app-header>  
+          
+    <div class="container">
+        <div class="title">
+          <p class="break"></p>
+          <h1>Log-in</h1>
+          <br>
+          <p>Welcome! Please login your account</p>
+        </div>
+
+        <div id="login">
+        <form>
+          <p class="break1"></p>
+          <fieldset class="fieldset_login">
+            <legend class="legend_signup">Email Address</legend>
+            <input class="input_login" name ="email" [(ngModel)]="userLog.email" (click)="signInError=''" type="email" required>
+          </fieldset> 
+          <p class="break1"></p>
+          <fieldset class="fieldset_login">
+            <legend class="legend_signup">Enter Your Password</legend>
+            <input  class="input_login" name ="password" [(ngModel)]="userLog.password" (click)="signInError=''" [type]="password" id ="password" required> 
+            <p (click)="showHide()" class="btn_eye">
+              <i class="fa fa-eye" aria-hidden="true" *ngIf="!show"></i>
+              <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="show"></i>
+            </p>
+          </fieldset> 
+          <br>
+          
+          <p class="break1"></p>
+          <button type="submit" id="btn_login" (click)="login()">Login</button>
+          <br>
+          <p *ngIf="signInError && signInError.length > 0"
+            style="color: darkred;font-size: small;position: absolute;">  
+            {{signInError}}
+          </p>
+          <br>
+          <br>
+          <a class="flip">Forgot Password?</a>
+        </form>
+      </div>
+    </div>
+              
+          
+    <app-footer></app-footer>
+  
+
+
+

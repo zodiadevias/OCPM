@@ -1,0 +1,27 @@
+
+#body_comp{
+    background-image: url("/img/ulo.png");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+
+}
+
+@media screen and (max-width: 884px) {
+    #body_comp{
+        background-image: url("/img/ulo.png");
+        background-repeat: no-repeat; 
+        background-position: right;
+        background-attachment: fixed;       
+        
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height:100%;
+        width:100%; 
+        
+    }
+}
